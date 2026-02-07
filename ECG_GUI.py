@@ -46,7 +46,7 @@ class MyGui:
         self.ax.set_xlabel(x_axis)
         self.ax.set_ylabel(y_axis)
             
-            # Embed plot in window
+ 
         self.canvas = FigureCanvasTkAgg(self.figure, self.window)
         self.canvas.get_tk_widget().pack(padx=10, pady=10)
 MyGui()
