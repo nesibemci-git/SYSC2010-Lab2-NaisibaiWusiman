@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 import pandas as pd
-#import Lab2_ecg.csv
+
 
 
 #plotting t and lead_I from Lab2_ecg.csv
@@ -21,12 +21,11 @@ plt.ylabel('lead')
 plt.title('subset t vs lead')
 plt.show()
 
-# Subtract the mean (remove DC offset)
-# Convert to numpy array
+# Subtracting the mean using numpy
 lead_I = np.array(df['lead_I'])
 t = np.array(df['t'])
 
-# Subtract the mean using numpy
+
 mean_value = np.mean(lead_I)
 lead_I_corrected = lead_I - mean_value
 plt.plot(t, lead_I_corrected)
